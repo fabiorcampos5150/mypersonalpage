@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title="Fábio Campos" current="home">
+  <p class="kicker">Staff AI Product Manager</p>
+  <h1>I make AI agents measurable, so teams can trust them in production.</h1>
+  <p class="lead">I lead the AI Platform at Neon, where every team ships its own skills into a single customer-facing agent, with evaluation gates, LLM judges and observability built in.</p>
+  <ul class="tags">
+    <li>AI platforms</li>
+    <li>Agent evaluation</li>
+    <li>LLM-as-a-judge</li>
+    <li>LLM observability</li>
+    <li>Experimentation</li>
+    <li>Conversational AI</li>
+  </ul>
+
+  <h2>What I work on</h2>
+  <p>My focus is evaluation and governance for agentic systems: offline release gates that measure skill activation with precision, recall and F1, hybrid eval datasets that combine human-calibrated references with synthetic conversations, LLM judges calibrated against human reviewers with Cohen's kappa, and observability with Langfuse that every skill owner can use. Before the platform, I led the Collections squad and built AI-driven debt recovery across WhatsApp and the app, which increased recovered credit value by 60%.</p>
+  <p>The thread running through my career is measuring whether complex systems actually work. I started at UNICAMP evaluating public science and technology policy. Then I spent 13+ years in data and product roles. Today I apply the same discipline to AI agents: clear rubrics, rater agreement, continuous evaluation and metrics tied to business outcomes.</p>
+
+  <h2>Latest writing</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="meta">17 Nov 2026 · 6 min read</span>
+      <h3><a class="title" href={`${base}/writing/policy-evaluation-to-agent-evals/`}>What evaluating public policy taught me about evaluating AI agents</a></h3>
+      <p>Rubrics, rater agreement, incentives, attribution and continuous evaluation, applied to agents in production.</p>
+    </div>
+  </div>
+  <p><a href={`${base}/writing/`}>All writing →</a></p>
+
+  <h2>Experience</h2>
+  <ul class="timeline">
+    <li><span class="when">2025 – now</span><div><h3>Neon · Staff Product Manager, AI Platform</h3>Agent platform, evaluation and observability for a single customer-facing agent; previously led AI-driven Collections.</div></li>
+    <li><span class="when">2024 – 2025</span><div><h3>Reclame AQUI · Senior Product Manager</h3>Data and GenAI products; launched RA DataHub and introduced early LLM evaluation practices.</div></li>
+    <li><span class="when">2022 – 2023</span><div><h3>Arquivei · Group Product Manager</h3>Data platform tribe; +35% MRR with a fiscal reconciliation product; 900+ enterprise clients.</div></li>
+    <li><span class="when">2020 – 2022</span><div><h3>Passei Direto, Junto Seguros</h3>ML recommendation (+44% CTR) and risk and pricing models.</div></li>
+    <li><span class="when">2010 – 2020</span><div><h3>Research and data roles</h3>UNICAMP (Lab-GEOPI), FAPESP, Eldorado CTI, UnitedHealth Group, Cisa Trading.</div></li>
+    <li><span class="when">2020 – now</span><div><h3>Impacta · Generative AI instructor</h3>Generative AI, multi-agent systems and BI; 200+ professionals mentored.</div></li>
+  </ul>
+
+  <h2>Publications</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="meta">Springer · 2016 · co-author</span>
+      <h3><a class="title" href="https://link.springer.com/chapter/10.1007/978-3-319-27210-8_14">The "Added Value" of Researchers: The Impact of Doctorate Holders on Economic Development</a></h3>
+      <p>Career paths of more than 4,000 PhD holders in Brazil, in <i>The Science and Technology Labor Force</i>.</p>
+    </div>
+    <div class="card">
+      <span class="meta">Revista Brasileira de Inovação · 2012 · co-author</span>
+      <h3><a class="title" href="https://periodicos.sbu.unicamp.br/ojs/index.php/rbi/article/view/8649041">Avaliação de impactos da Lei de Informática</a></h3>
+      <p>Impact evaluation of Brazil's ICT policy, recommending a continuous evaluation system based on indicators.</p>
+    </div>
+  </div>
+
+  <h2>Education</h2>
+  <p>M.Sc. in Science &amp; Technology Policy, UNICAMP · Data Science Specialization, Johns Hopkins · B.Sc. in Geography, UNICAMP</p>
+
+  <h2>Contact</h2>
+  <p>Based in Brazil, open to relocation (EU/US) and remote roles. The best way to reach me is on <a href="https://www.linkedin.com/in/fabiorcampos/">LinkedIn</a>.</p>
+</Base>

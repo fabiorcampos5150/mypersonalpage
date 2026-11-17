@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Projects" current="projects">
+  <p class="kicker">Projects</p>
+  <h1>Things I build to make evaluation practical</h1>
+  <p class="lead">Open tools and experiments around agent evaluation.</p>
+  <div class="cards">
+    <div class="card">
+      <span class="meta">In progress</span>
+      <h3>Human vs. LLM judge agreement lab <span class="badge">soon</span></h3>
+      <p>A public app with simulated customer-service conversations: label a few yourself, see an LLM judge label the same ones, and watch Cohen's kappa, the per-skill breakdown and the confusion matrix update. Covers two criteria, skill activation and harmlessness, with Langfuse as the backend for traces, annotation queues and evaluators. Code will be open on GitHub.</p>
+    </div>
+  </div>
+</Base>

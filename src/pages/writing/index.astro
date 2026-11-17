@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const posts = Object.values(import.meta.glob('./*.md', { eager: true }))
+  .map((p: any) => ({ ...p.frontmatter, url: p.url }))
+  .sort((a: any, b: any) => +new Date(b.date) - +new Date(a.date));
+---
+<Base title="Writing" current="writing">
+  <p class="kicker">Writing</p>
+  <h1>Notes on evaluating AI agents</h1>
+  <p class="lead">How to tell whether an agent is doing what you think it does: evals, LLM judges, observability and the product decisions around them.</p>
+  <div class="cards">
+    {posts.map((p: any) => (
+      <div class="card">
+        <span class="meta">{new Date(p.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })} · {p.readingTime}</span>
+        <h3><a class="title" href={p.url}>{p.title}</a></h3>
+        <p>{p.description}</p>
+      </div>
+    ))}
+    <div class="card">
+      <span class="meta">Coming next</span>
+      <h3>Calibrating an LLM judge against human reviewers <span class="badge">soon</span></h3>
+      <p>A step-by-step method using Cohen's kappa, the human ceiling and per-skill breakdowns, with a public tool to try it.</p>
+    </div>
+  </div>
+</Base>
